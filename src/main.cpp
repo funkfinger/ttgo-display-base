@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include <Button2.h>
 #include "esp_adc_cal.h"
-#include "bmp.h"
+#include "milky.h"
 
 #ifndef TFT_DISPOFF
 #define TFT_DISPOFF 0x28
@@ -205,8 +205,8 @@ void setup()
     }
 
     tft.setSwapBytes(true);
-    tft.pushImage(0, 0, 240, 135, ttgo);
-    espDelay(5000);
+    tft.pushImage(0, 0, 240, 135, milky);
+    espDelay(15000);
 
     tft.setRotation(0);
     tft.fillScreen(TFT_RED);
